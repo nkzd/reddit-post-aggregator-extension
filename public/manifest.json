@@ -1,25 +1,23 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+    "name": "Reddit post aggregator",
+    "description": "find relevant reddit posts",
+    "version": "1.0",
+    "permissions": [
+      "activeTab"
+    ],
+    "browser_action": {
+        "default_title": "Find relevant reddit posts.",
+        "default_icon": "icon.png",
+        "default_popup": "index.html"
     },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
-}
+    "content_scripts": [
+        {
+          "matches": [
+            "<all_urls>"
+          ],
+          "js": ["jquery-3.4.1.min.js","content.js"]
+        }
+    ],
+    "manifest_version": 2
+  }
+  

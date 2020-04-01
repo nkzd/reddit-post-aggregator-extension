@@ -16,8 +16,8 @@ const Post = ({id,subreddit,submittedBy,title,commentsLink,submittedLink, conten
                  </div>
              </div>
              <div className="links">
-                 <a target="_blank" href={submittedLink}><button>Link</button></a>
-                 <a target="_blank" href={commentsLink}><button>Comments</button></a>
+                 <a target="_blank" rel="noopener noreferrer" href={submittedLink}><button>Link</button></a>
+                 <a target="_blank" rel="noopener noreferrer" href={commentsLink}><button>Comments</button></a>
              </div>
          </div>
         )
@@ -29,8 +29,8 @@ const Post = ({id,subreddit,submittedBy,title,commentsLink,submittedLink, conten
             </h3>
             <span className="subreddit">{subreddit}</span>
             <div className="links">
-                <a target="_blank" href={submittedLink}><button>Link</button></a>
-                <a target="_blank" href={commentsLink}><button>Comments</button></a>
+                <a target="_blank" rel="noopener noreferrer" href={submittedLink}><button>Link</button></a>
+                <a target="_blank" rel="noopener noreferrer" href={commentsLink}><button>Comments</button></a>
             </div>
         </div>
     )

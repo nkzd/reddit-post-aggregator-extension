@@ -5,7 +5,6 @@ import ServerErrorCard from "./ServerErrorCard"
 import ZeroPostsFoundCard from "./ZeroPostsFoundCard";
 import ZeroKeywordsFoundCard from "./ZeroKeywordsFoundCard";
 import LoadingCard from "./LoadingCard";
-
 const App = (props) => {
   const [redditPosts,setRedditPosts] = useState([]);
   const [loading,setLoading] = useState(true);
@@ -14,13 +13,11 @@ const App = (props) => {
 
   useEffect(()=>{
     
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      chrome.tabs.sendMessage(tabs[0].id, {type: "getKeywords"}, function(payload) {
-
+    chrome.tabs.query({active: true, currentWindow: true}, (tabs) =>{
+      chrome.tabs.sendMessage(tabs[0].id, {type: "getKeywords"}, (payload) =>{
+          setLoading(true);
           console.log("Keywords for this page: " + payload);
-
           if(payload.length >= 3 && payload.length <= 5){
-            setLoading(true);
             fetch(process.env.REACT_APP_API_URL,{
               method: 'POST',
               headers: {
@@ -48,6 +45,7 @@ const App = (props) => {
               });
           }else{
             setZeroKeywordsFound(true);
+            setLoading(false);
           }
         
       });

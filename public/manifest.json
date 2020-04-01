@@ -1,6 +1,6 @@
 {
     "name": "Reddit post aggregator",
-    "description": "find relevant reddit posts",
+    "description": "Find relevant reddit posts",
     "version": "1.0",
     "permissions": [
       "activeTab"

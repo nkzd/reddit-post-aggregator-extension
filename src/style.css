@@ -25,10 +25,11 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 h3{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif; 
   line-height: 1.25;
   font-weight: bold;
   margin-bottom: 2px;
+  text-align: justify;
 }
 
 .thumb{
@@ -60,6 +61,7 @@ button {
   color: black;
   border: 1px solid rgba(0, 0, 0, 0.12);
   font-weight: 500;
+  min-width: 80px;
 }
 
 button:hover {
@@ -75,8 +77,8 @@ button:hover {
   padding: 5px;
   display: block;
   margin: 0 auto;
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
 }
 .errorText{
   text-align: center;

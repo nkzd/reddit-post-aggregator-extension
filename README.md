@@ -7,9 +7,16 @@ It's used with [Reddit Post Aggregator server](https://github.com/nkzd/reddit-po
 
 ## Live Demo
 
-Download the 1.0 release here: https://github.com/nkzd/reddit-post-aggregator-extension/releases/download/v1.0/Reddit.Post.Aggregator.Extension.zip
+Step 1: Download the extension here:
 
-## Installing
+```
+https://github.com/nkzd/reddit-post-aggregator-extension/releases/download/v1.0/Reddit.Post.Aggregator.Extension.zip
+```
+Step 2: Extract the zip.
+
+Step 3: Enable developer mode inside chrome extensions, click "load unpacked" and browse to build folder.
+
+## Building
 
 Step 1: Clone the repository
 
